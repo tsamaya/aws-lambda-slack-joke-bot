@@ -1,6 +1,6 @@
 import type { AWS } from '@serverless/typescript';
 
-import hello from '@functions/hello';
+import bot from '@functions/bot';
 
 const serverlessConfiguration: AWS = {
   service: 'twitter-joke-bot',
@@ -16,10 +16,11 @@ const serverlessConfiguration: AWS = {
     environment: {
       AWS_NODEJS_CONNECTION_REUSE_ENABLED: '1',
       NODE_OPTIONS: '--enable-source-maps --stack-trace-limit=1000',
+      JOKES_API_URL: process.env.JOKES_API_URL, // 'https://icanhazdadjoke.com/',
     },
   },
   // import the function via paths
-  functions: { hello },
+  functions: { bot },
   package: { individually: true },
   custom: {
     esbuild: {
