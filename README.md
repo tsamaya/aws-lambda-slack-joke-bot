@@ -1,4 +1,4 @@
-# aws-lambda-twitter-joke-bot
+# aws-lambda-slack-joke-bot
 
 This project has been generated using the `aws-nodejs-typescript` template from the [Serverless framework](https://www.serverless.com/).
 

@@ -5,7 +5,7 @@ const options = {
   headers: {
     Accept: 'application/json',
     'User-Agent':
-      'My Library (https://github.com/tsamaya/aws-lambda-twitter-joke-bot)',
+      'My Library (https://github.com/tsamaya/aws-lambda-slack-joke-bot)',
   },
 };
 

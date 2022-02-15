@@ -1,14 +1,20 @@
+// import * as dotenv from 'dotenv';
+// dotenv.config({ path: './.env' });
+
+import 'dotenv/config';
+
 import type { AWS } from '@serverless/typescript';
 
 import bot from '@functions/bot';
 
 const serverlessConfiguration: AWS = {
-  service: 'twitter-joke-bot',
+  service: 'slack-joke-bot',
   frameworkVersion: '3',
   plugins: ['serverless-esbuild'],
   provider: {
     name: 'aws',
     runtime: 'nodejs14.x',
+    region: 'eu-west-2',
     apiGateway: {
       minimumCompressionSize: 1024,
       shouldStartNameWithService: true,
