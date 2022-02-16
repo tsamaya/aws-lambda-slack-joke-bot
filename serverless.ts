@@ -33,6 +33,7 @@ const serverlessConfiguration: AWS = {
   package: { individually: true },
   custom: {
     esbuild: {
+      packager: 'yarn',
       bundle: true,
       minify: false,
       sourcemap: true,
