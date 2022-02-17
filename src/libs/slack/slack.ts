@@ -1,10 +1,6 @@
 import axios from 'axios';
+import { SlackMessage } from './types';
 
-export type SlackMessage = {
-  channel: string;
-  username: string;
-  text: string;
-};
 export const buildSlackMessage = (joke: string): SlackMessage => {
   const message = {
     channel: `#${process.env.SLACK_WEBHOOK_CHANNEL}`,

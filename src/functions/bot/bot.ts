@@ -1,7 +1,7 @@
 import type { APIGatewayProxyHandler } from 'aws-lambda';
 import { formatJSONResponse } from '../../libs/api-gateway';
 import { getDadJoke } from '../../libs/jokes/fetch-joke';
-import { Joke } from '../../libs/jokes/joke';
+import { Joke } from '../../libs/jokes/types';
 import {
   SlackMessage,
   buildSlackMessage,
@@ -9,7 +9,7 @@ import {
 } from '../../libs/slack';
 
 export const handler: APIGatewayProxyHandler = async () => {
-  console.log('bot starting');
+  console.log('-- the bot is starting');
   try {
     const dadJoke: Joke = await getDadJoke();
     const message: SlackMessage = buildSlackMessage(dadJoke.joke);
@@ -23,6 +23,6 @@ export const handler: APIGatewayProxyHandler = async () => {
       message: `No joke for tonight, sorry mate!`,
     });
   } finally {
-    console.log('bot ending');
+    console.log('-- the bot has finished');
   }
 };

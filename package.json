@@ -17,8 +17,7 @@
     "node": ">=14.15.0"
   },
   "dependencies": {
-    "axios": "^0.26.0",
-    "isomorphic-unfetch": "^3.1.0"
+    "axios": "^0.26.0"
   },
   "devDependencies": {
     "@serverless/typescript": "^3.0.0",

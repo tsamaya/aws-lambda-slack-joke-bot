@@ -1,6 +1,6 @@
 import axios from 'axios';
-// import fetch from 'isomorphic-unfetch';
-import { Joke } from './joke';
+
+import { Joke } from './types';
 
 const options = {
   headers: {

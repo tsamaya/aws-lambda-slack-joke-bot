@@ -1,2 +1,2 @@
-export * from './joke';
+export * from './types';
 export * from './fetch-joke';
