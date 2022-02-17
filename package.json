@@ -10,6 +10,7 @@
     "lint:fix": "eslint --fix .",
     "test": "jest",
     "test:coverage": "jest --coverage",
+    "test:ci": "jest --ci --coverage --silent",
     "test:watch": "jest --watch"
   },
   "engines": {
