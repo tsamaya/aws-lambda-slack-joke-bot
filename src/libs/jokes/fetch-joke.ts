@@ -1,4 +1,5 @@
-import fetch from 'isomorphic-unfetch';
+import axios from 'axios';
+// import fetch from 'isomorphic-unfetch';
 import { Joke } from './joke';
 
 const options = {
@@ -15,7 +16,8 @@ const options = {
  * @returns a Joke
  */
 export const getDadJoke = async (): Promise<Joke> => {
-  const response = await fetch(process.env.JOKES_API_URL, options);
-  const json = await response.json();
+  const response = await axios.get(process.env.JOKES_API_URL, options);
+  const json = response.data;
+  console.log(json);
   return json;
 };
