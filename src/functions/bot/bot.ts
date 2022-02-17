@@ -8,7 +8,7 @@ import {
   postSlackMessage,
 } from '../../libs/slack';
 
-const bot: APIGatewayProxyHandler = async () => {
+export const handler: APIGatewayProxyHandler = async () => {
   console.log('bot starting');
   try {
     const dadJoke: Joke = await getDadJoke();
@@ -26,5 +26,3 @@ const bot: APIGatewayProxyHandler = async () => {
     console.log('bot ending');
   }
 };
-
-export const main = bot;

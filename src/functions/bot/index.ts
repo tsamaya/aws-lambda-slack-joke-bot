@@ -1,9 +1,7 @@
-import { handlerPath } from '@libs/handler-resolver';
-
-console.log(handlerPath(__dirname) + '/handler.main');
+import { handlerPath } from '../../libs/handler-resolver';
 
 export default {
-  handler: `${handlerPath(__dirname)}/handler.main`,
+  handler: `${handlerPath(__dirname)}/bot.handler`,
   events: [
     {
       http: {

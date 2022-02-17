@@ -1,9 +1,14 @@
-import * as handler from '../src/functions/bot/handler';
+import * as bot from '../src/functions/bot/bot';
+import * as serverless from '../serverless';
 
-describe('handlers', () => {
+describe('environment', () => {
+  test('serverless', () => {
+    expect(serverless).toBeDefined();
+    expect(typeof serverless).toEqual('object');
+  });
   test('bot handler', () => {
-    expect(handler).toBeDefined();
-    expect(handler.main).toBeDefined();
-    expect(typeof handler.main).toEqual('function');
+    expect(bot).toBeDefined();
+    expect(bot.handler).toBeDefined();
+    expect(typeof bot.handler).toEqual('function');
   });
 });

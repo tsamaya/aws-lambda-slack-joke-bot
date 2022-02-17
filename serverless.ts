@@ -5,7 +5,7 @@ import 'dotenv/config';
 
 import type { AWS } from '@serverless/typescript';
 
-import bot from '@functions/bot';
+import bot from './src/functions/bot';
 
 const serverlessConfiguration: AWS = {
   service: 'slack-joke-bot',

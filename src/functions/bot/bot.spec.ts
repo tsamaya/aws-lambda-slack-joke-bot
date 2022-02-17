@@ -3,7 +3,7 @@ jest.mock('../../libs/slack');
 import * as jokes from '../../libs/jokes/fetch-joke';
 import * as slack from '../../libs/slack';
 
-import { main } from './handler';
+import { handler } from './bot';
 import { Joke } from '../../libs/jokes';
 
 describe('handler', () => {
@@ -21,7 +21,7 @@ describe('handler', () => {
 
     // mockPostSlackMessage.mockImplementation();
 
-    const response = await main(null, null, null);
+    const response = await handler(null, null, null);
     expect(response).toBeDefined();
     expect(getDadJokeSpy).toHaveBeenCalled();
     expect(postSlackMessageSpy).toHaveBeenCalled();
