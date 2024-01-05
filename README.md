@@ -13,7 +13,7 @@ Depending on your preferred package manager, follow the instructions below to de
 ### Using NPM
 
 - Run `npm i` to install the project dependencies
-- Run `npx sls deploy` to deploy this stack to AWS
+- Run `npx sls deploy` to deploy this stack to AWS, you might use a AWS profile: `npx sls deploy --aws-profile profilename`
 
 ### Using Yarn
 
